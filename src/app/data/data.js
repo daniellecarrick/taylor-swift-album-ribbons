@@ -67,7 +67,7 @@ export const data = [
   },
   {
     id: "1Zai5UJ2di3qEuR2HeT2s8",
-    name: "// [ ",
+    name: "I Look in People's Windows",
     album: "TTPD",
     release_date: "2024-04-16",
     track_number: 25,
