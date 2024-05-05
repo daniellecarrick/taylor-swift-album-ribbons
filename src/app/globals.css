@@ -28,14 +28,17 @@ body {
 
 @layer base {
   h1 {
-    @apply text-3xl;
-    @apply font-medium;
+    @apply text-5xl;
+    @apply font-bold;
     @apply font-mono;
+    @apply mb-8;
+    @apply leading-normal;
   }
   h2 {
-    @apply text-lg;
-    @apply font-medium;
+    @apply text-3xl;
+    @apply font-bold;
     @apply font-mono;
+    @apply mt-8;
   }
   h3 {
     @apply text-lg;
@@ -45,6 +48,9 @@ body {
   }
   p {
     @apply my-2;
+  }
+  a {
+    @apply font-medium;
   }
 }
 
