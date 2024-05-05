@@ -24,7 +24,7 @@ export default function SongStrip({ r, g, b, a = 1, track, trackNo, id, token })
       id={id}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="square hover:w-fit p-1 w-full h-28"
+      className="songStrip hover:w-fit p-1 grow h-28"
       style={{
         backgroundColor: `rgba(${r}, ${g}, ${b}, ${a})`,
        
@@ -34,7 +34,7 @@ export default function SongStrip({ r, g, b, a = 1, track, trackNo, id, token })
       {/* to do --> only show title on hover. and play preview clip on hover. (do post launch?) */}
 
         {showTooltip ? (
-          <div className="text-s w-min">
+          <div className="text-s">
             <p>{track}</p>
             <p className="text-xs mt-1"><a href={`https://open.spotify.com/track/${id}`} target="_blank">play on spotify</a></p>
           </div>

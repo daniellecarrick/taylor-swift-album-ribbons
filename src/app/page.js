@@ -179,7 +179,7 @@ export default function Home() {
         /> */}
       </div>
       <div className="z-10 w-full items-center font-mono text-sm ">
-        <div className="flex flex-row flex-wrap grow shrink">
+        <div className="flex flex-col flex-wrap grow shrink">
           <h2>All of the albums</h2>
           {Array.from(dataByAlbum, ([key, values]) => {
             return (
