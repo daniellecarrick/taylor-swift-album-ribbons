@@ -1,19 +1,11 @@
 "use client";
 
 import { useState } from "react";
-// async function previewUrl(id, token) {
-//   const response = await fetch(`https://api.spotify.com/v1/tracks/${id}`, {
-//     headers: { Authorization: `Bearer ${token}` },
-//   });
-//   const data = await response.json();
-//   //console.log(data)
-// }
-export default function SongStrip({ r, g, b, a = 1, track, trackNo, id, token }) {
+export default function SongStrip({ r, g, b, a = 1, track, trackNo, id }) {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleMouseEnter = (e) => {
     setShowTooltip(true);
-   // previewUrl(id, token);
   };
   const handleMouseLeave = (e) => {
     setShowTooltip(false);
@@ -31,8 +23,6 @@ export default function SongStrip({ r, g, b, a = 1, track, trackNo, id, token })
         order: `${trackNo}`,
       }}
     >
-      {/* to do --> only show title on hover. and play preview clip on hover. (do post launch?) */}
-
         {showTooltip ? (
           <div className="text-s">
             <p>{track}</p>

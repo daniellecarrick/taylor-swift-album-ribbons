@@ -1,9 +1,6 @@
 "use client";
-import Square from "./ui/square";
 import { data } from "./data/audio_features_data";
 import * as d3 from "d3";
-import { useEffect, useState } from "react";
-import SpotifyPlayer from "./ui/spotifyPlayer";
 import SongStrip from "./ui/songStrip";
 import Player from "./ui/audioPlayer";
 
@@ -36,23 +33,6 @@ const percentScale = d3.scaleLinear(
 rgbScale.clamp();
 
 export default function Home() {
-  const [accessToken, setAccessToken] = useState(null);
-  const [isLoading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("/api/auth", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setAccessToken(data.access_token);
-        setLoading(false);
-      });
-  }, []);
-
   return (
     <main className="min-h-screen flex-col items-center justify-between p-8 lg:p-8">
       <h1>Taylor Swift's musical ~~ vibes ~~ according to data</h1>
@@ -171,19 +151,13 @@ export default function Home() {
           b={bScale(0.16)}
           a={percentScale(-9.332)}
         />
-        {/* <Square
-          r={rScale(0.5)}
-          g={gScale(0.8)}
-          b={bScale(0.16)}
-          a={percentScale(-9.332)}
-        /> */}
       </div>
-      <div className="z-10 w-full items-center font-mono text-sm ">
+      <div className="z-10 w-full items-center">
         <div className="flex flex-col flex-wrap grow shrink">
           <h2>All of the albums</h2>
           {Array.from(dataByAlbum, ([key, values]) => {
             return (
-              <div className="flex flex-col w-full" key={key}>
+              <div className="flex flex-col w-full font-mono" key={key}>
                 <h3 className="mt-4">{key}</h3>
                 <div className="album-container flex justify-between">
                   {values.map((track, i) => {
@@ -197,7 +171,6 @@ export default function Home() {
                         track={track.name}
                         trackNo={track.track_number}
                         id={track.id}
-                        token={accessToken}
                       />
                     );
                   })}

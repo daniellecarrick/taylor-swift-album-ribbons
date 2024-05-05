@@ -30,15 +30,18 @@ body {
   h1 {
     @apply text-3xl;
     @apply font-medium;
+    @apply font-mono;
   }
   h2 {
     @apply text-lg;
     @apply font-medium;
+    @apply font-mono;
   }
   h3 {
     @apply text-lg;
     @apply mt-8;
     @apply font-medium;
+    @apply font-mono;
   }
   p {
     @apply my-2;
