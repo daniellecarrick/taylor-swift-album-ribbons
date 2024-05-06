@@ -137,8 +137,8 @@ export default function Home() {
       ------------------------------------- */}
         <h3>More acoustic songs appear blue</h3>
         <p>
-          Songs with high acoustic-ness will have stripped-down arrangements and
-          organic instrumentation. &quot;Sweet Nothing&quot; off{" "}
+          Songs with high acousticness will have stripped-down arrangements and
+          organic instrumentation. &quot;Sweet Nothing&quot; off of{" "}
           <i>Midnights</i> is a nice example of a highly acoustic song. Look at
           its swatch here:
         </p>
@@ -182,21 +182,20 @@ export default function Home() {
           songs.
         </p>
         <p>
-          In fact, he last 4 albums have been the most acoustic of her career.
-          Earlier albums have higher median danceability and energy values. In
-          fact, <i>1989 (Taylor's Version)</i> and{" "}
+          In fact, her last 4 albums have been the most acoustic of her career.
+          Earlier albums have higher median danceability and energy values. The
+          tracks on <i>1989 (Taylor's Version)</i> and{" "}
           <i>Speak Now (Taylor's Version)</i> both have the highest median
-          energy value and you can see that in their color ribbon's stronger red
-          tones. <i>Lover</i> has the highest median danceability and therefore
-          the most green tones.
+          energy value resulting in their color ribbon's stronger red tones.{" "}
+          <i>Lover</i> has the highest median danceability and therefore the
+          most green tones.
         </p>
         <p>
           Of course this approach is subject to interpretation. Using different
-          audio features or assigning them to different colors will produce
-          different color ribbons and highlight different sounds. I don't think
-          we can truly define a song with four metrics and a color. But even
-          these few features quickly illuminate the musical quality of Swift's
-          work.
+          audio features or assigning them to other colors will produce varied
+          color ribbons and highlight unique sounds. I don't think we can truly
+          define a song with four metrics and a color, but even these few
+          features quickly illuminate the musical quality of Swift's work.
         </p>
       </div>
       <div className="viz z-10 w-full items-center">
