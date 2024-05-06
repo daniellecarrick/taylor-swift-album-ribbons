@@ -38,7 +38,10 @@ export default function Home() {
   return (
     <main className="min-h-screen flex-col items-center justify-between p-8 lg:p-32">
       <div className="lg:max-w-xl">
-        <h1>Visualizing Taylor Swift's eras as color swatches</h1>
+        <h1 className="leading-snug">
+          Visualizing Taylor Swift's eras as color swatches
+        </h1>
+        <p>By Danielle Carrick</p>
         <Image
           src="/colorStrip.png"
           width={1200}
@@ -75,10 +78,11 @@ export default function Home() {
         </ul>
 
         <p>
-          To visualize a song, I convert these measures to RGBA space. That
-          gives me a color swatch for the song. String all the songs in an album
-          together into a ribbon, and this gives us an impression of the sonic
-          DNA within and across albums.
+          To visualize a song, I convert these measures to RGBA space. RGB
+          stands for Red, Green and Blue. A stands for Alpha, which controls
+          opacity. Assigning a measure ot each of these channels gives me a color swatch for each song. String all the
+          songs in an album together into a ribbon, and this gives us an
+          impression of the sonic DNA within and across albums.
         </p>
         <p>
           But what really are these measures? And how exactly do we go from four
@@ -234,7 +238,7 @@ export default function Home() {
         included. I used a logarithmic scale to convert energy, danceability and
         acousticness audio features into a value between 0 and 255. The alpha
         value (also known as opacity) is a number between 0 and 100% and used a
-        linear scale.
+        linear scale. Support and consultation provided by Stuart Mason.
       </p>
     </main>
   );
