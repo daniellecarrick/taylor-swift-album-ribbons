@@ -46,45 +46,51 @@ export default function Home() {
           className="mb-16"
         />
         <p>
-          Taylor Swift famously shifts her sound with each album, creating a new
-          era in her discography. From her twangy country origins in{" "}
+          Taylor Swift famously shifts her sound with each album, creating new
+          "eras" in her discography. From her twangy country origins in{" "}
           <i>Taylor Swift</i> to the indie-infused narratives of <i>folklore</i>{" "}
-          and <i>evermore</i>, Swift has continuously reinvented the look and
-          feel of her sound.
+          and <i>evermore</i>, Swift has continuously reinvented her sound.
         </p>
         <p>
-          Sonically, we can recognize these distinct eras in her discography.
-          But can we quantify them? Visualize them? What is it about each album
-          that contributes to it's unique sound?
+          Sonically, we recognize these distinct eras in her discography…but can
+          we quantify them? Visualize them? What is it about each album that
+          contributes to its unique sound?
         </p>
         <p>
           The{" "}
           <a href="https://developer.spotify.com/documentation/web-api/reference/get-track">
             Spotify API
           </a>{" "}
-          provides a set of audio features for every song that we can use as a
-          starting point. Each color on your screen is a combination of red,
-          green and blue light. By mapping key audio features such as energy,
-          danceability, and acousticness to those color channels, we can
-          visualize the distinct characteristics of each era as a color. Each
-          album's color swatches combine to create a color strips representing
-          the sonic DNA.
+          provides a set of audio features for every song that we can use to
+          understand trends through Taylor Swift's discography.
+          <p>In particular, I use four of Spotify's measures:</p>
+          <ul>
+            <li>Energy</li>
+            <li>Danceability</li>
+            <li>Acousticness </li>
+            <li>Loudness</li>
+          </ul>
         </p>
-        <p></p>
+        <p>
+          To visualize a song, I convert these measures to RGBA space. That
+          gives me a color swatch for the song. String all the songs in an album
+          together into a ribbon, and this gives us an impression of the sonic
+          DNA within and across albums.
+        </p>
+        <p>
+          But what really are these measures? And how exactly do we go from four
+          abstract numbers describing the song to a single color swatch?
+        </p>
         <h2>Determine a color for each track</h2>
         {/* -------------------------------------
       -----------  ENERGY  ---------------
       ------------------------------------- */}
         <h3>More energetic songs appear redder</h3>
         <p>
-          Each song's energy value determines how much red will be in the color
-          swatch. Energetic songs, characterized by high levels of intensity and
-          vigor, often evoke a sense of urgency and excitement. The most
-          energetic song in her portfolio is "Haunted" off of <i>Speak Now</i>.
-          It pulses with emotion and intensity. Songs whose energy values are
-          relatively higher than their danceability or acousticness values will
-          appear redder. Each song's energy value determines how much red will
-          be in the color swatch.
+          Energetic songs are characterized by intensity and vigor. Taylor
+          Swift's most energetic song is "Haunted" off of <i>Speak Now</i>. It
+          pulses with emotion and intensity, and presents in the analysis as a
+          vividly warm red.
         </p>
         <div className="flex flex-row gap-4">
           <Player
@@ -102,14 +108,13 @@ export default function Home() {
         {/* -------------------------------------
       -----------  DANCEABILITY ---------------
       ------------------------------------- */}
-        <h3>Highly danceable songs will skew green</h3>
+        <h3>More danceable songs appear green</h3>
         <p>
-          Each song's danceability value determines how much green will be in
-          the color swatch. Spotify considers musical elements like tempo,
-          rhythm stability, beat strength, and overall regularity to determine a
-          song's danceability. "I Think He Knows" off of <i>Lover</i> has one of
-          the highest danceability scores, and therefore it's color strip
-          appears relatively green.
+          Danceability measures musical elements like tempo, rhythm stability,
+          beat strength, and overall regularity. "I Think He Knows" off of{" "}
+          <i>Lover</i>
+          has one of the highest danceability scores, and and so its
+          corresponding color swatch is a sugary lime green:
         </p>
         <div className="flex flex-row gap-4">
           <Player
@@ -128,12 +133,11 @@ export default function Home() {
         {/* -------------------------------------
       -----------  ACOUSTICNESS  ---------------
       ------------------------------------- */}
-        <h3>The more acoustic the song, the bluer it will be</h3>
+        <h3>More acoustic songs appear blue</h3>
         <p>
-          Each song's acousticness value determines how much blue will be in the
-          color swatch. Characterized by their stripped-down arrangements and
-          organic instrumentation, acoustic songs leave behind electronic synth
-          and embrace a rawer sound.
+          Songs with high acoustic-ness will have stripped-down arrangements and
+          organic instrumentation. “Sweet nothing” off <i>Midnights</i> is a
+          nice example of a highly acoustic song. Look at its swatch here:
         </p>
         <div className="flex flex-row gap-4">
           <Player
@@ -173,6 +177,7 @@ export default function Home() {
           albums represent Swift's journey into indie influences and showcase
           some of her most acoustic songs.
         </p>
+        <p>You'll notice that her earlier work ...</p>
         <p>
           Of course this approach is subject to interpretation. Using different
           audio features or assigning them to different colors will produce
@@ -216,7 +221,8 @@ export default function Home() {
         only "(Taylor's Version)" releases are included. No live albums are
         included. I used a logarithmic scale to convert energy, danceability and
         acousticness audio features into a value between 0 and 255. The alpha
-        value (also known as opacity) is a number between 0 and 100% and used a linear scale.
+        value (also known as opacity) is a number between 0 and 100% and used a
+        linear scale.
       </p>
     </main>
   );
