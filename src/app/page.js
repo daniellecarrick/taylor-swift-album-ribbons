@@ -44,10 +44,11 @@ export default function Home() {
           width={1200}
           height={3}
           className="mb-16"
+          alt={""}
         />
         <p>
           Taylor Swift famously shifts her sound with each album, creating new
-          "eras" in her discography. From her twangy country origins in{" "}
+          &quot;eras&quot; in her discography. From her twangy country origins in{" "}
           <i>Taylor Swift</i> to the indie-infused narratives of <i>folklore</i>{" "}
           and <i>evermore</i>, Swift has continuously reinvented her sound.
         </p>
@@ -88,7 +89,7 @@ export default function Home() {
         <h3>More energetic songs appear redder</h3>
         <p>
           Energetic songs are characterized by intensity and vigor. Taylor
-          Swift's most energetic song is "Haunted" off of <i>Speak Now</i>. It
+          Swift's most energetic song is &quot;Haunted&quot; off of <i>Speak Now</i>. It
           pulses with emotion and intensity, and presents in the analysis as a
           vividly warm red.
         </p>
@@ -111,7 +112,7 @@ export default function Home() {
         <h3>More danceable songs appear green</h3>
         <p>
           Danceability measures musical elements like tempo, rhythm stability,
-          beat strength, and overall regularity. "I Think He Knows" off of{" "}
+          beat strength, and overall regularity. &quot;I Think He Knows&quot; off of{" "}
           <i>Lover</i>
           has one of the highest danceability scores, and and so its
           corresponding color swatch is a sugary lime green:
@@ -136,7 +137,7 @@ export default function Home() {
         <h3>More acoustic songs appear blue</h3>
         <p>
           Songs with high acoustic-ness will have stripped-down arrangements and
-          organic instrumentation. “Sweet nothing” off <i>Midnights</i> is a
+          organic instrumentation. &quot;Sweet Nothing&quot; off <i>Midnights</i> is a
           nice example of a highly acoustic song. Look at its swatch here:
         </p>
         <div className="flex flex-row gap-4">
@@ -153,7 +154,7 @@ export default function Home() {
           />
         </div>
         <p>
-          I know you might be thinking "Hey, that looks pretty purple". And
+          I know you might be thinking &quot;Hey, that looks pretty purple&quot;. And
           you're right! That's because while it ranks high on acousticness, it
           has a low loudness value (making it lighter). Because it's a softer
           song, it's opacity is set at 28. Here{" "}

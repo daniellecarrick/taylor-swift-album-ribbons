@@ -29,7 +29,7 @@ export default function SongSwatch({ r, g, b, a = 1, track, trackNo, id }) {
           <p>{track}</p>
           <p className="text-xs mt-1">
             <a href={`https://open.spotify.com/track/${id}`} target="_blank">
-              <Image src="/play-button.svg" width={15} height={15} className="inline mr-1"/>
+              <Image src="/play-button.svg" width={15} height={15} className="inline mr-1" alt={"play"}/>
               Spotify
             </a>
           </p>
