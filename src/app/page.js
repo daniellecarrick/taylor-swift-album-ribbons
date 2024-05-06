@@ -80,7 +80,7 @@ export default function Home() {
         <p>
           To visualize a song, I convert these measures to RGBA space. RGB
           stands for Red, Green and Blue. A stands for Alpha, which controls
-          opacity. Assigning a measure ot each of these channels gives me a color swatch for each song. String all the
+          opacity. Assigning a measure to each of these channels gives me a color swatch for each song. String all the
           songs in an album together into a ribbon, and this gives us an
           impression of the sonic DNA within and across albums.
         </p>
